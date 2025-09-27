@@ -9,32 +9,29 @@ import {
   Mic,
   FileText,
   Sparkles,
-  ChevronRight,
   Menu,
   X,
   ArrowRight,
-  CheckCircle,
   Calendar,
   Users,
   Trophy,
   Zap,
   Target,
-  BookOpen
+  BookOpen,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  transition: { duration: 0.5 },
 };
 
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 export default function Home() {
@@ -59,13 +56,22 @@ export default function Home() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-orange-500 transition-colors">
+              <a
+                href="#features"
+                className="text-gray-700 hover:text-orange-500 transition-colors"
+              >
                 Features
               </a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-orange-500 transition-colors">
+              <a
+                href="#how-it-works"
+                className="text-gray-700 hover:text-orange-500 transition-colors"
+              >
                 How It Works
               </a>
-              <a href="#roadmap" className="text-gray-700 hover:text-orange-500 transition-colors">
+              <a
+                href="#roadmap"
+                className="text-gray-700 hover:text-orange-500 transition-colors"
+              >
                 Roadmap
               </a>
               <button className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-lg transition-all hover:scale-105">
@@ -90,9 +96,15 @@ export default function Home() {
               className="md:hidden py-4 border-t border-orange-100"
             >
               <div className="flex flex-col space-y-4">
-                <a href="#features" className="text-gray-700">Features</a>
-                <a href="#how-it-works" className="text-gray-700">How It Works</a>
-                <a href="#roadmap" className="text-gray-700">Roadmap</a>
+                <a href="#features" className="text-gray-700">
+                  Features
+                </a>
+                <a href="#how-it-works" className="text-gray-700">
+                  How It Works
+                </a>
+                <a href="#roadmap" className="text-gray-700">
+                  Roadmap
+                </a>
                 <button className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full">
                   Join Waitlist
                 </button>
@@ -138,8 +150,9 @@ export default function Home() {
               variants={fadeIn}
               className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto"
             >
-              Turn voice memos, rough notes, and training observations into structured,
-              searchable knowledge that accelerates your Brazilian Jiu-Jitsu journey.
+              Turn voice memos, rough notes, and training observations into
+              structured, searchable knowledge that accelerates your Brazilian
+              Jiu-Jitsu journey.
             </motion.p>
 
             <motion.div
@@ -171,7 +184,7 @@ export default function Home() {
                 transition={{
                   duration: 8,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
                 className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl border border-orange-200/60 p-8"
               >
@@ -184,7 +197,9 @@ export default function Home() {
                     </div>
                     <div className="bg-gray-100 rounded-2xl p-4 font-mono text-sm text-gray-600 border border-gray-300/50">
                       <p className="mb-2">today rolled with john</p>
-                      <p className="mb-2">he caught me in triangle from guard</p>
+                      <p className="mb-2">
+                        he caught me in triangle from guard
+                      </p>
                       <p className="mb-2">need to watch posture more</p>
                       <p>tried that sweep from youtube didnt work</p>
                     </div>
@@ -194,23 +209,33 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2 text-orange-500">
                       <Sparkles className="w-5 h-5" />
-                      <span className="text-sm font-medium">Enhanced Notes</span>
+                      <span className="text-sm font-medium">
+                        Enhanced Notes
+                      </span>
                     </div>
                     <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-4 text-sm space-y-3 border border-emerald-300/60">
                       <div>
-                        <p className="font-semibold text-gray-900">Training Partner: John</p>
+                        <p className="font-semibold text-gray-900">
+                          Training Partner: John
+                        </p>
                         <p className="text-gray-600">6 rounds • 30 minutes</p>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900">Key Observations:</p>
+                        <p className="font-semibold text-gray-900">
+                          Key Observations:
+                        </p>
                         <ul className="list-disc list-inside text-gray-600 mt-1">
                           <li>Triangle setup from closed guard</li>
                           <li>Posture break leading to submission</li>
                         </ul>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900">Areas to Improve:</p>
-                        <p className="text-gray-600">Maintain upright posture in closed guard</p>
+                        <p className="font-semibold text-gray-900">
+                          Areas to Improve:
+                        </p>
+                        <p className="text-gray-600">
+                          Maintain upright posture in closed guard
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -222,7 +247,10 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 lg:py-32 relative overflow-hidden">
+      <section
+        id="features"
+        className="py-20 lg:py-32 relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-white via-rose-100/40 to-white" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -235,7 +263,8 @@ export default function Home() {
               Capture Everything, Miss Nothing
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Whether you're drilling techniques or sparring, Avanco ensures every insight is preserved and enhanced.
+              Whether you're drilling techniques or sparring, Avanco ensures
+              every insight is preserved and enhanced.
             </p>
           </motion.div>
 
@@ -244,33 +273,39 @@ export default function Home() {
               {
                 icon: <Brain className="w-6 h-6" />,
                 title: "Smart Enhancement",
-                description: "AI automatically structures your notes, identifies techniques, and creates connections between training sessions."
+                description:
+                  "AI automatically structures your notes, identifies techniques, and creates connections between training sessions.",
               },
               {
                 icon: <Search className="w-6 h-6" />,
                 title: "Instant Search",
-                description: "Find that specific guard pass from three months ago in seconds. Search by technique, partner, or concept."
+                description:
+                  "Find that specific guard pass from three months ago in seconds. Search by technique, partner, or concept.",
               },
               {
                 icon: <TrendingUp className="w-6 h-6" />,
                 title: "Progress Tracking",
-                description: "Visualize your improvement over time. See which techniques you're mastering and where to focus next."
+                description:
+                  "Visualize your improvement over time. See which techniques you're mastering and where to focus next.",
               },
               {
                 icon: <Mic className="w-6 h-6" />,
                 title: "Voice Notes",
-                description: "Record thoughts immediately after training. Avanco transcribes and enhances them automatically."
+                description:
+                  "Record thoughts immediately after training. Avanco transcribes and enhances them automatically.",
               },
               {
                 icon: <Target className="w-6 h-6" />,
                 title: "Pattern Recognition",
-                description: "Discover recurring challenges and breakthrough moments across your training history."
+                description:
+                  "Discover recurring challenges and breakthrough moments across your training history.",
               },
               {
                 icon: <BookOpen className="w-6 h-6" />,
                 title: "Knowledge Base",
-                description: "Build your personal BJJ encyclopedia with cross-referenced techniques and concepts."
-              }
+                description:
+                  "Build your personal BJJ encyclopedia with cross-referenced techniques and concepts.",
+              },
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -294,9 +329,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               </motion.div>
             ))}
@@ -305,7 +338,10 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 lg:py-32 bg-gradient-to-b from-teal-50 via-emerald-50/60 to-white">
+      <section
+        id="how-it-works"
+        className="py-20 lg:py-32 bg-gradient-to-b from-teal-50 via-emerald-50/60 to-white"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
@@ -326,21 +362,24 @@ export default function Home() {
               {
                 number: "1",
                 title: "Record Your Training",
-                description: "Voice memo, quick note, or detailed entry - capture training however works for you.",
-                icon: <Mic className="w-6 h-6" />
+                description:
+                  "Voice memo, quick note, or detailed entry - capture training however works for you.",
+                icon: <Mic className="w-6 h-6" />,
               },
               {
                 number: "2",
                 title: "AI Enhancement",
-                description: "Avanco structures your notes, identifies techniques, and adds context automatically.",
-                icon: <Sparkles className="w-6 h-6" />
+                description:
+                  "Avanco structures your notes, identifies techniques, and adds context automatically.",
+                icon: <Sparkles className="w-6 h-6" />,
               },
               {
                 number: "3",
                 title: "Review & Improve",
-                description: "Search past sessions, identify patterns, and accelerate your learning curve.",
-                icon: <TrendingUp className="w-6 h-6" />
-              }
+                description:
+                  "Search past sessions, identify patterns, and accelerate your learning curve.",
+                icon: <TrendingUp className="w-6 h-6" />,
+              },
             ].map((step, index) => (
               <motion.div
                 key={index}
@@ -359,9 +398,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold mb-2 text-gray-900">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-lg">
-                    {step.description}
-                  </p>
+                  <p className="text-gray-600 text-lg">{step.description}</p>
                 </div>
                 <div className="hidden sm:flex items-center text-emerald-500">
                   {step.icon}
@@ -373,7 +410,10 @@ export default function Home() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-20 lg:py-32 bg-gradient-to-b from-white via-amber-50/50 to-orange-50/60">
+      <section
+        id="roadmap"
+        className="py-20 lg:py-32 bg-gradient-to-b from-white via-amber-50/50 to-orange-50/60"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
@@ -395,38 +435,44 @@ export default function Home() {
                 icon: <Zap className="w-6 h-6" />,
                 title: "Smart Flashcards",
                 status: "Q1 2025",
-                description: "Review techniques with spaced repetition and visual aids."
+                description:
+                  "Review techniques with spaced repetition and visual aids.",
               },
               {
                 icon: <Calendar className="w-6 h-6" />,
                 title: "Training Plans",
                 status: "Q2 2025",
-                description: "AI-generated weekly plans based on your progress and goals."
+                description:
+                  "AI-generated weekly plans based on your progress and goals.",
               },
               {
                 icon: <Users className="w-6 h-6" />,
                 title: "Partner Reviews",
                 status: "Q2 2025",
-                description: "Exchange feedback with training partners after sessions."
+                description:
+                  "Exchange feedback with training partners after sessions.",
               },
               {
                 icon: <Trophy className="w-6 h-6" />,
                 title: "Competition Prep",
                 status: "Q3 2025",
-                description: "Tournament-specific game plans and mental preparation tools."
+                description:
+                  "Tournament-specific game plans and mental preparation tools.",
               },
               {
                 icon: <Target className="w-6 h-6" />,
                 title: "Ecological Training",
                 status: "Q3 2025",
-                description: "Adaptive training recommendations based on your learning style."
+                description:
+                  "Adaptive training recommendations based on your learning style.",
               },
               {
                 icon: <Brain className="w-6 h-6" />,
                 title: "Video Analysis",
                 status: "Q4 2025",
-                description: "Connect your notes to training footage for complete analysis."
-              }
+                description:
+                  "Connect your notes to training footage for complete analysis.",
+              },
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -447,9 +493,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold mb-2 text-gray-900">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-600">
-                  {feature.description}
-                </p>
+                <p className="text-sm text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -470,7 +514,8 @@ export default function Home() {
               Ready to Level Up Your BJJ Journey?
             </h2>
             <p className="text-xl mb-8 text-orange-50">
-              Join the waitlist and be the first to transform your training with Avanco.
+              Join the waitlist and be the first to transform your training with
+              Avanco.
             </p>
             <form
               onSubmit={(e) => {
@@ -515,13 +560,22 @@ export default function Home() {
               </p>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-orange-500 transition-colors"
+              >
                 Privacy
               </a>
-              <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-orange-500 transition-colors"
+              >
                 Terms
               </a>
-              <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-orange-500 transition-colors"
+              >
                 Contact
               </a>
             </div>
