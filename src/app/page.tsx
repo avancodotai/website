@@ -50,7 +50,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text text-transparent"
               >
-                Avanco
+                Avanço
               </motion.div>
             </div>
 
@@ -276,7 +276,7 @@ export default function Home() {
               Capture Everything, Miss Nothing
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Whether you're drilling techniques or sparring, Avanco ensures
+              Whether you're drilling techniques or sparring, Avanço ensures
               every insight is preserved and enhanced.
             </p>
           </motion.div>
@@ -305,7 +305,7 @@ export default function Home() {
                 icon: <Mic className="w-6 h-6" />,
                 title: "Voice Notes",
                 description:
-                  "Record thoughts immediately after training. Avanco transcribes and enhances them automatically.",
+                  "Record thoughts immediately after training. Avanço transcribes and enhances them automatically.",
               },
               {
                 icon: <Target className="w-6 h-6" />,
@@ -383,7 +383,7 @@ export default function Home() {
                 number: "2",
                 title: "AI Enhancement",
                 description:
-                  "Avanco structures your notes, identifies techniques, and adds context automatically.",
+                  "Avanço structures your notes, identifies techniques, and adds context automatically.",
                 icon: <Sparkles className="w-6 h-6" />,
               },
               {
@@ -528,7 +528,7 @@ export default function Home() {
             </h2>
             <p className="text-xl mb-8 text-orange-50">
               Join the waitlist and be the first to transform your training with
-              Avanco.
+              Avanço.
             </p>
             <form
               onSubmit={(e) => {
@@ -566,7 +566,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text text-transparent">
-                Avanco
+                Avanço
               </div>
               <p className="mt-2 text-sm text-gray-600">
                 Transform your BJJ journey with AI
@@ -594,7 +594,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-orange-100 text-center text-sm text-gray-600">
-            © 2025 Avanco. All rights reserved.
+            © 2025 Avanço. All rights reserved.
           </div>
         </div>
       </footer>
