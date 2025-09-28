@@ -1,24 +1,24 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Brain,
-  Search,
-  TrendingUp,
-  Mic,
-  FileText,
-  Sparkles,
-  Menu,
-  X,
   ArrowRight,
-  Calendar,
-  Users,
-  Trophy,
-  Zap,
-  Target,
   BookOpen,
+  Brain,
+  Calendar,
+  FileText,
+  Menu,
+  Mic,
+  Search,
+  Sparkles,
+  Target,
+  TrendingUp,
+  Trophy,
+  Users,
+  X,
+  Zap,
 } from "lucide-react";
+import { useState } from "react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -74,13 +74,17 @@ export default function Home() {
               >
                 Roadmap
               </a>
-              <button className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-lg transition-all hover:scale-105">
+              <button
+                type="button"
+                className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-lg transition-all hover:scale-105"
+              >
                 Join Waitlist
               </button>
             </nav>
 
             {/* Mobile Menu Button */}
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2"
             >
@@ -105,7 +109,10 @@ export default function Home() {
                 <a href="#roadmap" className="text-gray-700">
                   Roadmap
                 </a>
-                <button className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full">
+                <button
+                  type="button"
+                  className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full"
+                >
                   Join Waitlist
                 </button>
               </div>
@@ -159,11 +166,17 @@ export default function Home() {
               variants={fadeIn}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <button className="group px-8 py-4 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center">
+              <button
+                type="button"
+                className="group px-8 py-4 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center"
+              >
                 Start Free Trial
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 bg-white text-gray-900 rounded-full border-2 border-orange-200 hover:border-orange-300 hover:shadow-lg transition-all">
+              <button
+                type="button"
+                className="px-8 py-4 bg-white text-gray-900 rounded-full border-2 border-orange-200 hover:border-orange-300 hover:shadow-lg transition-all"
+              >
                 Watch Demo
               </button>
             </motion.div>
@@ -308,7 +321,7 @@ export default function Home() {
               },
             ].map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -382,7 +395,7 @@ export default function Home() {
               },
             ].map((step, index) => (
               <motion.div
-                key={index}
+                key={step.title}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -434,48 +447,48 @@ export default function Home() {
               {
                 icon: <Zap className="w-6 h-6" />,
                 title: "Smart Flashcards",
-                status: "Q1 2025",
+                status: "Q1 2026",
                 description:
                   "Review techniques with spaced repetition and visual aids.",
               },
               {
                 icon: <Calendar className="w-6 h-6" />,
                 title: "Training Plans",
-                status: "Q2 2025",
+                status: "Q1 2026",
                 description:
                   "AI-generated weekly plans based on your progress and goals.",
               },
               {
                 icon: <Users className="w-6 h-6" />,
                 title: "Partner Reviews",
-                status: "Q2 2025",
+                status: "Q2 2026",
                 description:
                   "Exchange feedback with training partners after sessions.",
               },
               {
                 icon: <Trophy className="w-6 h-6" />,
                 title: "Competition Prep",
-                status: "Q3 2025",
+                status: "Q2 2026",
                 description:
                   "Tournament-specific game plans and mental preparation tools.",
               },
               {
                 icon: <Target className="w-6 h-6" />,
                 title: "Ecological Training",
-                status: "Q3 2025",
+                status: "Q2 2026",
                 description:
                   "Adaptive training recommendations based on your learning style.",
               },
               {
                 icon: <Brain className="w-6 h-6" />,
                 title: "Video Analysis",
-                status: "Q4 2025",
+                status: "Q4 2026",
                 description:
                   "Connect your notes to training footage for complete analysis.",
               },
             ].map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -561,19 +574,19 @@ export default function Home() {
             </div>
             <div className="flex space-x-6">
               <a
-                href="#"
+                href="/privacy"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
                 Privacy
               </a>
               <a
-                href="#"
+                href="/terms"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
                 Terms
               </a>
               <a
-                href="#"
+                href="/contact"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
                 Contact
