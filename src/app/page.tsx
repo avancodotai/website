@@ -19,6 +19,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState } from "react";
+import { FAQSection } from "@/components/faq";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -74,6 +75,12 @@ export default function Home() {
               >
                 Roadmap
               </a>
+              <a
+                href="#faq"
+                className="text-gray-700 hover:text-orange-500 transition-colors"
+              >
+                FAQ
+              </a>
               <button
                 type="button"
                 className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-lg transition-all hover:scale-105"
@@ -108,6 +115,9 @@ export default function Home() {
                 </a>
                 <a href="#roadmap" className="text-gray-700">
                   Roadmap
+                </a>
+                <a href="#faq" className="text-gray-700">
+                  FAQ
                 </a>
                 <button
                   type="button"
@@ -512,6 +522,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="py-20 lg:py-32 relative overflow-hidden">
