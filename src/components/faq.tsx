@@ -13,12 +13,12 @@ const faqItems: FAQItem[] = [
   {
     question: "What exactly is Avanço and how does it work?",
     answer:
-      "Avanço is an AI-powered training journal for Brazilian Jiu-Jitsu practitioners. Simply record voice notes or type rough notes after training, and our AI automatically structures them, identifies techniques and patterns, creates connections between sessions, and makes everything instantly searchable. It's like having a personal BJJ data analyst that transforms messy notes into actionable insights.",
+      "Avanço is your complete BJJ training companion that helps you level up faster. Start by recording voice or text notes after training - our AI automatically structures them, identifies techniques, and creates connections. Then, use smart flashcards for spaced repetition, follow personalized training plans tailored to your goals, track your progress with detailed stats, and engage with gamified drills. It's an all-in-one system designed specifically for BJJ practitioners to accelerate mastery.",
   },
   {
     question: "How is this different from regular note-taking apps?",
     answer:
-      "Unlike generic note apps, Avanço understands BJJ context. It automatically recognizes techniques, positions, and submissions, tracks your progress with specific training partners, identifies patterns in your game, and provides AI-generated insights. Every note becomes part of your searchable BJJ knowledge base, helping you identify weaknesses and accelerate improvement.",
+      "Avanço is a complete training system, not just a note-taking app. While it starts with AI-enhanced notes that understand BJJ context, it goes much further: auto-generated flashcards for technique retention, personalized training plans based on your progress, detailed analytics and stats, ecological games for skill development, and session reviews with AI insights. Everything is connected and designed specifically for martial arts learning.",
   },
   {
     question: "Is my training data private and secure?",
@@ -38,17 +38,17 @@ const faqItems: FAQItem[] = [
   {
     question: "Can I record voice notes directly in the app?",
     answer:
-      "Yes! Just tap the microphone button and speak naturally about your training - who you rolled with, what worked, what didn't. Avanço instantly transcribes your voice notes and enhances them with AI processing. It's perfect for capturing thoughts immediately after rolling when details are fresh in your mind.",
+      "Yes! Just tap the microphone button and speak naturally about your training - who you rolled with, what worked, what didn't. Avanço instantly transcribes and enhances your voice notes with AI, then automatically generates flashcards from key techniques and updates your training stats. It's the fastest way to capture insights right after rolling when details are fresh.",
   },
   {
     question: "Does it work for both beginners and advanced practitioners?",
     answer:
-      "Absolutely! Whether you're a white belt learning fundamentals or a black belt refining details, Avanço adapts to your level. Beginners benefit from structured learning and pattern recognition, while advanced practitioners can track subtle adjustments and competition preparation. The AI insights grow more personalized as it learns your training style.",
+      "Absolutely! Whether you're a white belt or a black belt, Avanço adapts to your level. Beginners benefit from structured training plans, flashcard reviews of fundamentals, and clear progress tracking. Advanced practitioners can refine subtle details, prepare for competitions, and use ecological games to maintain technique retention. The entire system becomes more personalized as it learns your training style and goals.",
   },
   {
     question: "Can I share my notes with my coach or training partners?",
     answer:
-      "Yes, you have complete control over sharing. You can selectively share specific training entries or technique notes with your coach or training partners. This is perfect for getting feedback on your progress or coordinating training focus with partners. You always maintain control over what you share and with whom.",
+      "Yes, you have complete control over sharing. You can selectively share training notes, progress stats, or training plan goals with your coach or training partners. This is perfect for getting feedback, coordinating training focus, or showing your competition preparation progress. You always maintain control over what you share and with whom.",
   },
 ];
 
