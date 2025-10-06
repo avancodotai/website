@@ -8,17 +8,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Avanço - Transform Your BJJ Training Notes Into Actionable Insights",
+  title: "Avanço - Notes That Level You Up",
   description:
-    "AI-powered note enhancement that turns raw training observations into structured, searchable knowledge for Brazilian Jiu-Jitsu practitioners.",
+    "Your complete BJJ training companion. AI-enhanced notes, smart flashcards, personalized training plans, and progress tracking. Everything you need to master Brazilian Jiu-Jitsu, faster.",
   keywords:
-    "BJJ, Brazilian Jiu-Jitsu, training notes, AI notes, martial arts, grappling, training journal",
+    "BJJ, Brazilian Jiu-Jitsu, training notes, AI notes, martial arts, grappling, training journal, flashcards, training plan, BJJ stats",
   authors: [{ name: "Avanço" }],
   openGraph: {
-    title:
-      "Avanço - Transform Your BJJ Training Notes Into Actionable Insights",
+    title: "Avanço - Notes That Level You Up",
     description:
-      "AI-powered note enhancement that turns raw training observations into structured, searchable knowledge.",
+      "AI-enhanced notes, smart flashcards, personalized training plans, and progress tracking for BJJ practitioners.",
     url: "https://avanco.app",
     siteName: "Avanço",
     images: [
@@ -33,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avanço - Transform Your BJJ Training Notes",
+    title: "Avanço - Notes That Level You Up",
     description:
-      "AI-powered note enhancement for Brazilian Jiu-Jitsu practitioners",
+      "Your complete BJJ training companion with AI-enhanced notes, flashcards, and training plans",
     images: ["/og-image.png"],
   },
 };

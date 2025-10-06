@@ -1,20 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Calendar, Target, Trophy, Users, Zap } from "lucide-react";
+import {
+  Brain,
+  Calendar,
+  Gamepad2,
+  Target,
+  Trophy,
+  Users,
+  Zap,
+} from "lucide-react";
 
 const roadmapItems = [
   {
     icon: <Zap className="w-6 h-6" />,
     title: "Smart Flashcards",
-    status: "Q1 2026",
+    status: "Coming Soon",
     description: "Review techniques with spaced repetition and visual aids.",
   },
   {
     icon: <Calendar className="w-6 h-6" />,
     title: "Training Plans",
-    status: "Q1 2026",
+    status: "Coming Soon",
     description: "AI-generated weekly plans based on your progress and goals.",
+  },
+  {
+    icon: <Gamepad2 className="w-6 h-6" />,
+    title: "Gamified Drills",
+    status: "Q1 2026",
+    description:
+      "Interactive games and ecological drills that make learning techniques fun and memorable.",
   },
   {
     icon: <Users className="w-6 h-6" />,
@@ -27,13 +42,6 @@ const roadmapItems = [
     title: "Competition Prep",
     status: "Q2 2026",
     description: "Tournament-specific game plans and mental preparation tools.",
-  },
-  {
-    icon: <Target className="w-6 h-6" />,
-    title: "Ecological Training",
-    status: "Q2 2026",
-    description:
-      "Adaptive training recommendations based on your learning style.",
   },
   {
     icon: <Brain className="w-6 h-6" />,

@@ -36,7 +36,7 @@ export function HeroSection() {
         >
           <motion.div variants={fadeIn} className="mb-6">
             <span className="inline-block px-4 py-1 bg-gradient-to-r from-orange-200 to-rose-200 text-orange-800 rounded-full text-sm font-medium">
-              AI-Powered BJJ Training Journal
+              Your Complete BJJ Training Companion
             </span>
           </motion.div>
 
@@ -44,9 +44,8 @@ export function HeroSection() {
             variants={fadeIn}
             className="text-5xl lg:text-7xl font-bold mb-6 text-gray-900"
           >
-            Transform Your BJJ Training Notes Into{" "}
             <span className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text text-transparent">
-              Actionable Insights
+              Notes That Level You Up
             </span>
           </motion.h1>
 
@@ -54,9 +53,9 @@ export function HeroSection() {
             variants={fadeIn}
             className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto"
           >
-            Turn voice memos, rough notes, and training observations into
-            structured, searchable knowledge that accelerates your Brazilian
-            Jiu-Jitsu journey.
+            AI-enhanced notes, smart flashcards, personalized training plans,
+            and progress tracking. Everything you need to master Brazilian
+            Jiu-Jitsu, faster.
           </motion.p>
 
           <motion.div

@@ -20,9 +20,9 @@ const steps = [
   },
   {
     number: "3",
-    title: "Review & Improve",
+    title: "Train & Level Up",
     description:
-      "Search past sessions, identify patterns, and accelerate your learning curve.",
+      "Use flashcards, follow personalized training plans, track stats, and master techniques faster.",
     icon: <TrendingUp className="w-6 h-6" />,
   },
 ];

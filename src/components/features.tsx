@@ -1,44 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Brain, Mic, Search, Target, TrendingUp } from "lucide-react";
+import {
+  BookOpen,
+  Brain,
+  Gamepad2,
+  Layers,
+  Mic,
+  Route,
+  Search,
+  TrendingUp,
+} from "lucide-react";
 
 const features = [
   {
     icon: <Brain className="w-6 h-6" />,
-    title: "Smart Enhancement",
+    title: "AI-Enhanced Notes",
     description:
-      "AI automatically structures your notes, identifies techniques, and creates connections between training sessions.",
+      "Voice or text notes automatically structured and enhanced. Captures techniques, insights, and connections from every session.",
   },
   {
-    icon: <Search className="w-6 h-6" />,
-    title: "Instant Search",
+    icon: <Layers className="w-6 h-6" />,
+    title: "Smart Flashcards",
     description:
-      "Find that specific guard pass from three months ago in seconds. Search by technique, partner, or concept.",
+      "Auto-generated flashcards from your notes. Review techniques, positions, and concepts with spaced repetition.",
+  },
+  {
+    icon: <Route className="w-6 h-6" />,
+    title: "Training Plans",
+    description:
+      "Personalized training roadmaps based on your goals, gaps, and progress. Know exactly what to focus on next.",
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
-    title: "Progress Tracking",
+    title: "Progress Analytics",
     description:
-      "Visualize your improvement over time. See which techniques you're mastering and where to focus next.",
+      "Visualize your growth with detailed stats. Track techniques mastered, mat time, and improvement trends.",
   },
   {
-    icon: <Mic className="w-6 h-6" />,
-    title: "Voice Notes",
+    icon: <Gamepad2 className="w-6 h-6" />,
+    title: "Interactive Drills",
     description:
-      "Record thoughts immediately after training. Avanço transcribes and enhances them automatically.",
-  },
-  {
-    icon: <Target className="w-6 h-6" />,
-    title: "Pattern Recognition",
-    description:
-      "Discover recurring challenges and breakthrough moments across your training history.",
+      "Gamified learning experiences and ecological drills. Make technique retention fun and effective.",
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
-    title: "Knowledge Base",
+    title: "Session Reviews",
     description:
-      "Build your personal BJJ encyclopedia with cross-referenced techniques and concepts.",
+      "Revisit past training with AI-powered insights. See patterns, breakthroughs, and areas for improvement.",
   },
 ];
 
@@ -54,11 +63,11 @@ export function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-            Capture Everything, Miss Nothing
+            Everything You Need to Level Up
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you're drilling techniques or sparring, Avanço ensures every
-            insight is preserved and enhanced.
+            From intelligent note-taking to personalized training plans, Avanço
+            gives you the complete toolkit for BJJ mastery.
           </p>
         </motion.div>
 
