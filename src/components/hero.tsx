@@ -40,6 +40,20 @@ export function HeroSection() {
             </span>
           </motion.div>
 
+          <motion.div
+            variants={fadeIn}
+            className="mb-8 text-gray-700 max-w-2xl mx-auto"
+          >
+            <div className="font-serif text-lg">
+              <span className="font-semibold text-gray-900">Avanço</span>
+              <span className="text-gray-500 mx-2">/ə-ˈvan-so/</span>
+              <span className="italic text-gray-600">verb</span>
+            </div>
+            <div className="text-gray-600 mt-1">
+              to progress · to advance · to level up your game
+            </div>
+          </motion.div>
+
           <motion.h1
             variants={fadeIn}
             className="text-5xl lg:text-7xl font-bold mb-6 text-gray-900"
