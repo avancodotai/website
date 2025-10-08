@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @layer base {
   :root {
@@ -53,5 +54,24 @@
 
   .animate-pulse-soft {
     animation: pulse-soft 4s ease-in-out infinite;
+  }
+
+  /* Remove underlines from prose headings */
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    text-decoration: none !important;
+  }
+
+  .prose h1:hover,
+  .prose h2:hover,
+  .prose h3:hover,
+  .prose h4:hover,
+  .prose h5:hover,
+  .prose h6:hover {
+    text-decoration: none !important;
   }
 }

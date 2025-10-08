@@ -30,28 +30,24 @@ export default async function BlogPage() {
       <BlogHero />
 
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {/* Featured Posts */}
+        {/* Featured Post (First One Only) */}
         {featuredPosts.length > 0 && (
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              Featured Posts
+              Featured Post
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} featured />
-              ))}
-            </div>
+            <BlogCard post={featuredPosts[0]} featured />
           </div>
         )}
 
-        {/* All Posts */}
-        {regularPosts.length > 0 && (
+        {/* All Posts Grid */}
+        {(featuredPosts.slice(1).length > 0 || regularPosts.length > 0) && (
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              {featuredPosts.length > 0 ? "All Posts" : "Latest Posts"}
+              {featuredPosts.length > 0 ? "Latest Posts" : "All Posts"}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post) => (
+              {[...featuredPosts.slice(1), ...regularPosts].map((post) => (
                 <BlogCard key={post.slug} post={post} />
               ))}
             </div>

@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://avanco.ai"),
   title: "Avanço - Notes That Level You Up",
   description:
     "Your complete BJJ training companion. AI-enhanced notes, smart flashcards, personalized training plans, and progress tracking. Everything you need to master Brazilian Jiu-Jitsu, faster.",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: "Avanço - Notes That Level You Up",
     description:
       "AI-enhanced notes, smart flashcards, personalized training plans, and progress tracking for BJJ practitioners.",
-    url: "https://avanco.app",
+    url: "https://avanco.ai",
     siteName: "Avanço",
     images: [
       {
