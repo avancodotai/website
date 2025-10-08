@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
 
+export const dynamic = "force-static";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://avanco.ai";
   const posts = await getAllPosts();
