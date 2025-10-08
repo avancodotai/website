@@ -1,26 +1,11 @@
 "use client";
 
-import { format } from "date-fns";
 import { motion } from "framer-motion";
-import { Calendar, Clock } from "lucide-react";
 import Link from "next/link";
 import type { BlogPost } from "@/types/blog";
-
-const CATEGORY_COLORS = {
-  "bjj-techniques": "bg-blue-100 text-blue-700 border-blue-200",
-  "training-tips": "bg-emerald-100 text-emerald-700 border-emerald-200",
-  "product-updates": "bg-purple-100 text-purple-700 border-purple-200",
-  community: "bg-amber-100 text-amber-700 border-amber-200",
-  "getting-started": "bg-rose-100 text-rose-700 border-rose-200",
-} as const;
-
-const CATEGORY_NAMES = {
-  "bjj-techniques": "BJJ Techniques",
-  "training-tips": "Training Tips",
-  "product-updates": "Product Updates",
-  community: "Community",
-  "getting-started": "Getting Started",
-} as const;
+import { Avatar } from "./avatar";
+import { CategoryBadge } from "./category-badge";
+import { PostMeta } from "./post-meta";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -46,11 +31,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               <div className="md:w-2/3 p-8 lg:p-12">
                 {/* Category Badge */}
                 <div className="mb-4">
-                  <span
-                    className={`inline-block px-4 py-2 text-sm font-medium rounded-full border ${CATEGORY_COLORS[post.category]}`}
-                  >
-                    {CATEGORY_NAMES[post.category]}
-                  </span>
+                  <CategoryBadge category={post.category} href={undefined} />
                 </div>
 
                 {/* Title */}
@@ -64,24 +45,15 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
                 </p>
 
                 {/* Meta Info */}
-                <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>
-                      {format(new Date(post.publishedAt), "MMM d, yyyy")}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>{post.readingTime}</span>
-                  </div>
-                </div>
+                <PostMeta
+                  publishedAt={post.publishedAt}
+                  readingTime={post.readingTime}
+                  className="mb-6"
+                />
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-rose-400 rounded-full flex items-center justify-center text-white font-semibold">
-                    {post.author.name.charAt(0)}
-                  </div>
+                  <Avatar name={post.author.name} />
                   <div>
                     <p className="text-sm font-medium text-gray-900">
                       {post.author.name}
@@ -138,11 +110,11 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           <div className="p-6">
             {/* Category Badge */}
             <div className="mb-4">
-              <span
-                className={`inline-block px-3 py-1 text-xs font-medium rounded-full border ${CATEGORY_COLORS[post.category]}`}
-              >
-                {CATEGORY_NAMES[post.category]}
-              </span>
+              <CategoryBadge
+                category={post.category}
+                size="sm"
+                href={undefined}
+              />
             </div>
 
             {/* Title */}
@@ -156,23 +128,15 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
             </p>
 
             {/* Meta Info */}
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <div className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4" />
-                <span>{format(new Date(post.publishedAt), "MMM d, yyyy")}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4" />
-                <span>{post.readingTime}</span>
-              </div>
-            </div>
+            <PostMeta
+              publishedAt={post.publishedAt}
+              readingTime={post.readingTime}
+            />
 
             {/* Author */}
             <div className="mt-4 pt-4 border-t border-gray-100">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-rose-400 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                  {post.author.name.charAt(0)}
-                </div>
+                <Avatar name={post.author.name} size="sm" />
                 <div>
                   <p className="text-sm font-medium text-gray-900">
                     {post.author.name}

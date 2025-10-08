@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Blog - BJJ Training Tips & Insights | Avanço",
     description:
       "Expert advice, training techniques, and insights to help you master Brazilian Jiu-Jitsu faster.",
-    url: "https://avanco.app/blog",
+    url: "https://avanco.ai/blog",
     siteName: "Avanço",
     type: "website",
   },
