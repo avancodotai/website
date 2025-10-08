@@ -1,15 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Calendar,
-  Gamepad2,
-  Target,
-  Trophy,
-  Users,
-  Zap,
-} from "lucide-react";
+import { Brain, Calendar, Gamepad2, Trophy, Users, Zap } from "lucide-react";
 
 const roadmapItems = [
   {
