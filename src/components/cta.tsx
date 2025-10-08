@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 export function CTASection() {
-  const [email, setEmail] = useState("");
-
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-rose-500" />
@@ -23,29 +20,20 @@ export function CTASection() {
             Join the waitlist and be the first to transform your training with
             Avanço.
           </p>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              console.log("Email submitted:", email);
-              setEmail("");
-            }}
-            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              required
-              className="flex-1 px-4 py-3 rounded-full bg-white/20 backdrop-blur-lg text-white placeholder-orange-100 border border-white/30 focus:outline-none focus:border-white/50"
-            />
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto justify-center">
             <button
-              type="submit"
-              className="px-6 py-3 bg-white text-orange-600 rounded-full font-semibold hover:bg-orange-50 transition-all hover:scale-105"
+              type="button"
+              className="px-8 py-4 bg-white text-orange-600 rounded-full font-semibold hover:bg-orange-50 transition-all hover:scale-105"
+              data-tally-open="wkMzN6"
+              data-tally-align-left="1"
+              data-tally-emoji-text="👋"
+              data-tally-emoji-animation="wave"
+              data-tally-auto-close="7000"
+              data-tally-form-events-forwarding="1"
             >
               Join Waitlist
             </button>
-          </form>
+          </div>
           <p className="mt-4 text-sm text-orange-100">
             No credit card required • Early access • Exclusive updates
           </p>

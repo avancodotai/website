@@ -50,6 +50,12 @@ export function Header() {
             <button
               type="button"
               className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-lg transition-all hover:scale-105"
+              data-tally-open="wkMzN6"
+              data-tally-align-left="1"
+              data-tally-emoji-text="👋"
+              data-tally-emoji-animation="wave"
+              data-tally-auto-close="7000"
+              data-tally-form-events-forwarding="1"
             >
               Join Waitlist
             </button>
@@ -88,6 +94,12 @@ export function Header() {
               <button
                 type="button"
                 className="px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full"
+                data-tally-open="wkMzN6"
+                data-tally-align-left="1"
+                data-tally-emoji-text="👋"
+                data-tally-emoji-animation="wave"
+                data-tally-auto-close="7000"
+                data-tally-form-events-forwarding="1"
               >
                 Join Waitlist
               </button>
