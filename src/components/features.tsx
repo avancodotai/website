@@ -6,9 +6,7 @@ import {
   Brain,
   Gamepad2,
   Layers,
-  Mic,
   Route,
-  Search,
   TrendingUp,
 } from "lucide-react";
 
