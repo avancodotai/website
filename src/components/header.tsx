@@ -54,7 +54,7 @@ export function Header() {
               data-tally-align-left="1"
               data-tally-emoji-text="👋"
               data-tally-emoji-animation="wave"
-              data-tally-auto-close="7000"
+              data-tally-auto-close="1000"
               data-tally-form-events-forwarding="1"
             >
               Join Waitlist
@@ -98,7 +98,7 @@ export function Header() {
                 data-tally-align-left="1"
                 data-tally-emoji-text="👋"
                 data-tally-emoji-animation="wave"
-                data-tally-auto-close="7000"
+                data-tally-auto-close="1000"
                 data-tally-form-events-forwarding="1"
               >
                 Join Waitlist
