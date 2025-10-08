@@ -207,6 +207,6 @@ Built with modern web technologies and a passion for Brazilian Jiu-Jitsu.
 
 **Made with ❤️ for the BJJ community**
 
-[Website](https://avanco.com) · [Contact](mailto:hello@avanco.com)
+[Website](https://avanco.ai) · [Contact](mailto:admin@avanco.ai)
 
 </div>
