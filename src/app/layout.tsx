@@ -52,6 +52,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
       </body>
       <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />

@@ -11,12 +11,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-rose-50">
       <Header />
-      <HeroSection />
-      <FeaturesSection />
-      <HowItWorksSection />
-      <RoadmapSection />
-      <FAQSection />
-      <CTASection />
+      <main id="main-content">
+        <HeroSection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        <RoadmapSection />
+        <FAQSection />
+        <CTASection />
+      </main>
       <Footer />
     </div>
   );

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { useId, useState } from "react";
 
 interface FAQItem {
   question: string;
@@ -13,7 +13,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What exactly is Avanço and how does it work?",
     answer:
-      "Avanço is your complete BJJ training companion that helps you level up faster. Start by recording voice or text notes after training - our AI automatically structures them, identifies techniques, and creates connections. Then, use smart flashcards for spaced repetition, follow personalized training plans tailored to your goals, track your progress with detailed stats, and engage with gamified drills. It's an all-in-one system designed specifically for BJJ practitioners to accelerate mastery.",
+      "Avanço is your complete BJJ training companion that helps you level up faster. Start by recording voice or text notes after training \u2014 our AI automatically structures them, identifies techniques, and creates connections. Then, use smart flashcards for spaced repetition, follow personalized training plans tailored to your goals, track your progress with detailed stats, and engage with gamified drills. It\u2019s an all-in-one system designed specifically for BJJ practitioners to accelerate mastery.",
   },
   {
     question: "How is this different from regular note-taking apps?",
@@ -28,22 +28,22 @@ const faqItems: FAQItem[] = [
   {
     question: "How much will Avanço cost?",
     answer:
-      "Avanço is currently in beta and free to use for early adopters. We're gathering feedback from the BJJ community to perfect the experience before launching. Pricing will be announced soon, but we're committed to keeping it affordable for individual practitioners while offering special rates for teams and gyms. Join the beta now to lock in exclusive early-bird pricing when we launch!",
+      "Avanço is currently in beta and free to use for early adopters. We\u2019re gathering feedback from the BJJ community to perfect the experience before launching. Pricing will be announced soon, but we\u2019re committed to keeping it affordable for individual practitioners while offering special rates for teams and gyms. Join the beta now to lock in exclusive early-bird pricing when we launch!",
   },
   {
     question: "What platforms does Avanço support?",
     answer:
-      "Avanço is available as native apps for both iOS and Android devices. Everything syncs seamlessly across all your devices - record notes on your phone at the gym and review them on your tablet at home. The apps work offline too, perfect for capturing notes during tournaments or training camps where connectivity might be limited.",
+      "Avanço is available as native apps for both iOS and Android devices. Everything syncs seamlessly across all your devices \u2014 record notes on your phone at the gym and review them on your tablet at home. The apps work offline too, perfect for capturing notes during tournaments or training camps where connectivity might be limited.",
   },
   {
     question: "Can I record voice notes directly in the app?",
     answer:
-      "Yes! Just tap the microphone button and speak naturally about your training - who you rolled with, what worked, what didn't. Avanço instantly transcribes and enhances your voice notes with AI, then automatically generates flashcards from key techniques and updates your training stats. It's the fastest way to capture insights right after rolling when details are fresh.",
+      "Yes! Just tap the microphone button and speak naturally about your training \u2014 who you rolled with, what worked, what didn\u2019t. Avanço instantly transcribes and enhances your voice notes with AI, then automatically generates flashcards from key techniques and updates your training stats. It\u2019s the fastest way to capture insights right after rolling when details are fresh.",
   },
   {
     question: "Does it work for both beginners and advanced practitioners?",
     answer:
-      "Absolutely! Whether you're a white belt or a black belt, Avanço adapts to your level. Beginners benefit from structured training plans, flashcard reviews of fundamentals, and clear progress tracking. Advanced practitioners can refine subtle details, prepare for competitions, and use ecological games to maintain technique retention. The entire system becomes more personalized as it learns your training style and goals.",
+      "Absolutely! Whether you\u2019re a white belt or a black belt, Avanço adapts to your level. Beginners benefit from structured training plans, flashcard reviews of fundamentals, and clear progress tracking. Advanced practitioners can refine subtle details, prepare for competitions, and use ecological games to maintain technique retention. The entire system becomes more personalized as it learns your training style and goals.",
   },
   {
     question: "Can I share my notes with my coach or training partners?",
@@ -54,6 +54,7 @@ const faqItems: FAQItem[] = [
 
 export function FAQSection() {
   const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
+  const id = useId();
 
   const toggleItem = (index: number) => {
     setOpenItems((prev) => ({
@@ -65,67 +66,83 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="py-20 lg:py-32 bg-gradient-to-b from-white via-orange-50/30 to-white"
+      className="py-20 lg:py-32 bg-gradient-to-b from-white via-gray-50/50 to-white"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+          <span className="inline-block px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-semibold mb-4">
+            FAQ
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Get answers to common questions about Avanço
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
-          {faqItems.map((item, index) => (
-            <motion.div
-              key={item.question}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="mb-4"
-            >
-              <div className="bg-white rounded-2xl border border-orange-200/50 overflow-hidden hover:border-orange-300 transition-colors">
-                <button
-                  type="button"
-                  onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-5 text-left hover:bg-orange-50/30 transition-colors"
-                >
-                  <div className="flex justify-between items-start gap-4">
-                    <h3 className="font-semibold text-gray-900 text-lg">
-                      {item.question}
-                    </h3>
-                    <motion.div
-                      animate={{ rotate: openItems[index] ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-gray-400 flex-shrink-0 mt-1"
-                    >
-                      <ChevronDown className="w-5 h-5" />
-                    </motion.div>
-                  </div>
-                </button>
-                {openItems[index] && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-5"
+        <div className="max-w-3xl mx-auto space-y-3">
+          {faqItems.map((item, index) => {
+            const isOpen = openItems[index] ?? false;
+            const triggerId = `${id}-trigger-${index}`;
+            const panelId = `${id}-panel-${index}`;
+
+            return (
+              <motion.div
+                key={item.question}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.04 }}
+              >
+                <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-orange-200 transition-colors shadow-sm">
+                  <button
+                    id={triggerId}
+                    type="button"
+                    onClick={() => toggleItem(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    className="w-full px-6 py-5 text-left hover:bg-orange-50/30 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-orange-400 focus-visible:rounded-2xl"
                   >
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </div>
-            </motion.div>
-          ))}
+                    <div className="flex justify-between items-center gap-4">
+                      <h3 className="font-semibold text-gray-900">
+                        {item.question}
+                      </h3>
+                      <motion.div
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-gray-400 flex-shrink-0"
+                      >
+                        <ChevronDown className="w-5 h-5" aria-hidden="true" />
+                      </motion.div>
+                    </div>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.section
+                        id={panelId}
+                        aria-labelledby={triggerId}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <p className="px-6 pb-5 text-gray-600 leading-relaxed">
+                          {item.answer}
+                        </p>
+                      </motion.section>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div
@@ -137,10 +154,10 @@ export function FAQSection() {
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-400 to-rose-400 text-white rounded-full hover:shadow-lg transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-400 to-rose-400 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-orange-200/50 transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
           >
             Get in Touch
-            <ChevronDown className="w-4 h-4 rotate-[-90deg]" />
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </a>
         </motion.div>
       </div>
