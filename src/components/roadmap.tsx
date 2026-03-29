@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { Brain, Calendar, Gamepad2, Trophy, Users, Zap } from "lucide-react";
 
-const statusStyles: Record<string, { bg: string; text: string }> = {
-  "Coming Soon": { bg: "bg-emerald-100", text: "text-emerald-700" },
-  "Q1 2026": { bg: "bg-blue-100", text: "text-blue-700" },
-  "Q2 2026": { bg: "bg-violet-100", text: "text-violet-700" },
-  "Q4 2026": { bg: "bg-amber-100", text: "text-amber-700" },
+const statusStyles: Record<string, string> = {
+  "Coming Soon": "text-emerald-600 bg-emerald-50",
+  "Q1 2026": "text-blue-600 bg-blue-50",
+  "Q2 2026": "text-violet-600 bg-violet-50",
+  "Q4 2026": "text-amber-600 bg-amber-50",
 };
 
 const roadmapItems = [
@@ -28,7 +28,7 @@ const roadmapItems = [
     title: "Gamified Drills",
     status: "Q1 2026",
     description:
-      "Interactive games and ecological drills that make learning techniques fun and memorable.",
+      "Interactive games and ecological drills that make techniques stick.",
   },
   {
     icon: Users,
@@ -40,73 +40,63 @@ const roadmapItems = [
     icon: Trophy,
     title: "Competition Prep",
     status: "Q2 2026",
-    description: "Tournament-specific game plans and mental preparation tools.",
+    description: "Tournament game plans and mental preparation tools.",
   },
   {
     icon: Brain,
     title: "Video Analysis",
     status: "Q4 2026",
     description:
-      "Connect your notes to training footage for complete analysis.",
+      "Connect notes to training footage for complete technique analysis.",
   },
 ];
 
 export function RoadmapSection() {
   return (
-    <section
-      id="roadmap"
-      className="py-20 lg:py-32 bg-gradient-to-b from-white via-orange-50/30 to-white"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="roadmap" className="py-24 lg:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="max-w-2xl mb-16"
         >
-          <span className="inline-block px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">
-            Roadmap
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900 tracking-tight">
-            The Future of BJJ Training
+          <p className="text-sm font-medium text-orange-500 mb-3">Roadmap</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight">
+            What&rsquo;s coming next
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We&rsquo;re just getting started. Here&rsquo;s what&rsquo;s coming
-            next.
+          <p className="mt-4 text-lg text-neutral-500">
+            We&rsquo;re just getting started. Here&rsquo;s the path ahead.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {roadmapItems.map((feature, index) => {
-            const Icon = feature.icon;
-            const style = statusStyles[feature.status] ?? {
-              bg: "bg-gray-100",
-              text: "text-gray-700",
-            };
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {roadmapItems.map((item, index) => {
+            const Icon = item.icon;
             return (
               <motion.div
-                key={feature.title}
+                key={item.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-orange-200 hover:shadow-lg hover:shadow-orange-100/40 transition-shadow"
+                transition={{ delay: index * 0.06 }}
+                className="bg-neutral-50 rounded-2xl p-6 hover:bg-neutral-100 transition-colors"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-rose-400 rounded-xl flex items-center justify-center text-white shadow-sm">
+                  <div className="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center text-white">
                     <Icon className="w-5 h-5" aria-hidden="true" />
                   </div>
                   <span
-                    className={`text-xs font-semibold px-2.5 py-1 ${style.bg} ${style.text} rounded-full`}
+                    className={`text-xs font-medium px-2.5 py-1 rounded-full ${statusStyles[item.status] ?? "text-neutral-600 bg-neutral-100"}`}
                   >
-                    {feature.status}
+                    {item.status}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">
-                  {feature.title}
+                <h3 className="text-base font-semibold text-neutral-900 mb-1">
+                  {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {feature.description}
+                <p className="text-sm text-neutral-500 leading-relaxed">
+                  {item.description}
                 </p>
               </motion.div>
             );

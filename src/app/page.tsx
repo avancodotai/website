@@ -9,7 +9,7 @@ import { RoadmapSection } from "@/components/roadmap";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-rose-50">
+    <div className="min-h-screen bg-white">
       <Header />
       <main id="main-content">
         <HeroSection />
